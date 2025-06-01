@@ -1,0 +1,18 @@
+{
+    "name": "eks-cluster",
+    "main": "index.ts",
+    "devDependencies": {
+        "@types/node": "^18",
+        "typescript": "^5.0.0"
+    },
+    "engines": {
+        "node": "v22.16.0"
+    },
+    "dependencies": {
+        "@pulumi/aws": "^6.81.0",
+        "@pulumi/awsx": "^2.0.2",
+        "@pulumi/eks": "^3.9.1",
+        "@pulumi/pulumi": "^3.173.0",
+        "dotenv": "^16.5.0"
+    }
+}
