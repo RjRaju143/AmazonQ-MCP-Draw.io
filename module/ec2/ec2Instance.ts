@@ -8,7 +8,7 @@ import { publicSubnets, vpc } from "../vpc"
 const keyName = utils.sshKey.name || "AmazonQ";
 const sshDir = path.resolve(utils.sshKey.path || "~", ".ssh");
 const privateKeyPath = path.join(sshDir, keyName);
-const publicKeyPath = `${privateKeyPath}.pem`;
+const publicKeyPath = `${privateKeyPath}.pub`;
 const securityGroupName = utils.ec2.securityGroup.name;
 const ec2Name = utils.ec2.name
 
