@@ -62,8 +62,5 @@ export const utils = {
         name : `${ENVIRONMENT}-ec2-AmazonQ`,
         amiId : "ami-0e35ddab05955cf57",
         instanceType: "t2.medium",
-        userData: userDataScript || `#!/bin/bash
-        sudo apt update -y
-        `,
     }
 };

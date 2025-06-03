@@ -2,7 +2,7 @@ import * as aws from "@pulumi/aws";
 import * as fs from "fs";
 import * as path from "path";
 import { execSync } from "child_process";
-import { provider, utils } from "../../config";
+import { provider, utils, userDataScript } from "../../config";
 import { publicSubnets, vpc } from "../vpc"
 
 const keyName = utils.sshKey.name || "AmazonQ";
@@ -55,7 +55,7 @@ export const ec2Instance = publicSubnets[0].apply(subnet =>
         keyName: keyPair.keyName,
         vpcSecurityGroupIds: [ec2SecurityGroup.id],
         associatePublicIpAddress: true,
-        userData: utils.ec2.userData,
+        userData: userDataScript,
         tags: { Name: ec2Name },
     }, { provider })
 );

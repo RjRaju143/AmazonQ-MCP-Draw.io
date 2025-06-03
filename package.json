@@ -1,5 +1,5 @@
 {
-    "name": "eks-cluster",
+    "name": "amazonq",
     "main": "index.ts",
     "devDependencies": {
         "@types/node": "^18",
